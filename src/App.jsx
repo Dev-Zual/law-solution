@@ -1,10 +1,12 @@
-import { Button } from "./components/ui/button";
+import Navbar from "./components/pages/Navbar";
 
 function App() {
   return (
     <>
-      <header></header>
-      <main>
+      <header>
+        <Navbar />
+      </header>
+      <main className="container mx-auto px-9">
         <h1 className="text-5xl">tailwind</h1>
         <p>poppins font</p>
       </main>
