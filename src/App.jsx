@@ -1,3 +1,4 @@
+import Banner from "./components/pages/Banner";
 import Navbar from "./components/pages/Navbar";
 
 function App() {
@@ -7,8 +8,7 @@ function App() {
         <Navbar />
       </header>
       <main className="container mx-auto px-9">
-        <h1 className="text-5xl">tailwind</h1>
-        <p>poppins font</p>
+        <Banner />
       </main>
       <footer></footer>
     </>
