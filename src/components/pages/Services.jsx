@@ -1,4 +1,4 @@
-import Card from "../ui/Card";
+import CustomCard from "../ui/CustomCard";
 
 export default function Services() {
   const cardData = [
@@ -62,7 +62,7 @@ export default function Services() {
       {/* card area */}
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {cardData.map((cardItem, index) => (
-          <Card key={index} cardData={cardItem} />
+          <CustomCard key={index} cardData={cardItem} />
         ))}
       </div>
     </div>
