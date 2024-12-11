@@ -1,7 +1,6 @@
 import { CarouselItem } from "./carousel";
 
 export default function CustomCarousel({ ...singleCarouselItem }) {
-  console.log(singleCarouselItem);
   const { sliderImg, userImg, name, title, description } =
     singleCarouselItem.carouselItem;
   return (

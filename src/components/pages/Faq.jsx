@@ -78,7 +78,7 @@ export default function Faq() {
           </Accordion>
         </div>
         <div className="w-full">
-          <img src="./images/faq.png" alt="" />
+          <img className="w-full" src="./images/faq.png" alt="" />
         </div>
       </div>
     </div>
