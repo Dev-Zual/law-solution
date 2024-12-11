@@ -1,4 +1,7 @@
+import { Button } from "../ui/button";
 import CustomCard from "../ui/CustomCard";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 export default function ContactUs() {
   const contactData = [
@@ -36,13 +39,38 @@ export default function ContactUs() {
         </div>
       </div>
       {/* contact bottom */}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row gap-6">
         <div className="w-full grid grid-cols-2">
           {contactData.map((contactItem, index) => (
             <CustomCard key={index} cardData={contactItem} />
           ))}
         </div>
-        <div className="w-full"></div>
+        <div className="w-full">
+          <div className="space-y-6">
+            <Input
+              className="py-6 focus:outline-0 focus:border focus:border-[#B68C5A] focus-visible:ring-0"
+              type="text"
+              placeholder="Your Name"
+            />
+            <Input
+              className="py-6 focus:outline-0 focus:border focus:border-[#B68C5A] focus-visible:ring-0"
+              type="email"
+              placeholder="Your Email"
+            />
+            <Input
+              className="py-6 focus:outline-0 focus:border focus:border-[#B68C5A] focus-visible:ring-0"
+              type="text"
+              placeholder="Subject"
+            />
+            <div className="grid w-full gap-5">
+              <Textarea
+                className="py-5 h-36 focus:outline-0 focus:border focus:border-[#B68C5A] focus-visible:ring-0"
+                placeholder="Type your message here."
+              />
+              <Button className="py-7">Send message</Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
