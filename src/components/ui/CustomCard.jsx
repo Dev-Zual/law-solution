@@ -5,7 +5,7 @@ export default function CustomCard({ ...cardData }) {
   const { img, title, description, icon, address, working } = cardItem;
   // console.log(cardItem.email);
   return (
-    <div className="text-center px-5 py-7  border space-y-4">
+    <div className="text-center px-5 py-7  space-y-4">
       <div className="flex justify-center">
         <img src={img} alt="" />
       </div>

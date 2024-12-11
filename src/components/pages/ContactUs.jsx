@@ -42,7 +42,14 @@ export default function ContactUs() {
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="w-full grid grid-cols-2">
           {contactData.map((contactItem, index) => (
-            <CustomCard key={index} cardData={contactItem} />
+            <div
+              key={index}
+              className={`${index % 2 === 0 ? "border-r" : ""} ${
+                index < contactData.length - 2 ? "border-b" : ""
+              }`}
+            >
+              <CustomCard cardData={contactItem} />
+            </div>
           ))}
         </div>
         <div className="w-full">

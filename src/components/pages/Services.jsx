@@ -62,7 +62,14 @@ export default function Services() {
       {/* card area */}
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {cardData.map((cardItem, index) => (
-          <CustomCard key={index} cardData={cardItem} />
+          <div
+            key={index}
+            className={` ${index % 3 === 1 ? "border-r border-l" : ""} ${
+              index < cardData.length - 3 ? "border-b" : ""
+            }`}
+          >
+            <CustomCard cardData={cardItem} />
+          </div>
         ))}
       </div>
     </div>
