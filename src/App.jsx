@@ -1,5 +1,6 @@
 import Banner from "./components/pages/Banner";
 import ClientSay from "./components/pages/ClientSay";
+import Faq from "./components/pages/Faq";
 import Navbar from "./components/pages/Navbar";
 import Services from "./components/pages/Services";
 
@@ -13,6 +14,7 @@ function App() {
         <Banner />
         <Services />
         <ClientSay />
+        <Faq />
       </main>
       <footer></footer>
     </>

@@ -12,7 +12,8 @@ export default function CustomCarousel({ ...singleCarouselItem }) {
       >
         <div className="bg-black/60 rounded-lg h-full w-full">
           <div className="flex justify-center items-center h-full">
-            <div className="text-center text-white space-y-4 p-4">
+            {/* slider content text */}
+            <div className="text-center text-white space-y-4 px-4 py-12 lg:py-4">
               <div className="flex justify-center p-1">
                 <img
                   className="size-[70px] p-1 bg-white rounded-full"
@@ -22,7 +23,9 @@ export default function CustomCarousel({ ...singleCarouselItem }) {
               </div>
               <h4 className="text-2xl font-bold">{name}</h4>
               <p className="text-base text-[#f3f3f3]">{title}</p>
-              <p className="mt-3 text-[#f3f3f3] px-16 mx-6">{description}</p>
+              <p className="mt-0 lg:mt-3 text-[#f3f3f3] px-16 mx-6">
+                {description}
+              </p>
             </div>
           </div>
         </div>
