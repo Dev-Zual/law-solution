@@ -2,8 +2,10 @@ import React from "react";
 
 export default function CustomCard({ ...cardData }) {
   const cardItem = cardData.cardData;
-  const { img, title, description, icon, address, working } = cardItem;
+  const { img, title, description, icon, address, working, phone, email } =
+    cardItem;
   // console.log(cardItem.email);
+
   return (
     <div className="text-center px-5 py-7  space-y-4">
       <div className="flex justify-center">
@@ -13,43 +15,32 @@ export default function CustomCard({ ...cardData }) {
       {/* conditional rendering description, address, working */}
       {
         <p className="text-base text-[#707070] leading-[1.625rem]">
-          {description
-            ? description
-            : address
-            ? address.split(",").map((part, index) => (
-                <React.Fragment key={index}>
-                  {part.trim()} <br />
-                </React.Fragment>
-              ))
-            : working?.length
-            ? working.map((item, index) => (
-                <React.Fragment key={index}>
-                  {item} <br />
-                </React.Fragment>
-              ))
-            : ""}
+          {description ||
+            (address
+              ? address.split(",").map((part, index) => (
+                  <React.Fragment key={index}>
+                    {part.trim()} <br />
+                  </React.Fragment>
+                ))
+              : working?.map((item, index) => (
+                  <React.Fragment key={index}>
+                    {item} <br />
+                  </React.Fragment>
+                ))) ||
+            ""}
         </p>
       }
       {/* rendering phone or email */}
-      {cardItem?.phone?.length ? (
+      {
         <p className="text-base text-[#707070] leading-[1.625rem]">
-          {cardItem.phone.map((item, index) => (
+          {(phone?.length ? phone : email)?.map((item, index) => (
             <React.Fragment key={index}>
               {item} <br />
             </React.Fragment>
           ))}
         </p>
-      ) : cardItem?.email?.length ? (
-        <p className="text-base text-[#707070] leading-[1.625rem]">
-          {cardItem.email.map((item, index) => (
-            <React.Fragment key={index}>
-              {item} <br />{" "}
-            </React.Fragment>
-          ))}
-        </p>
-      ) : (
-        <div> </div>
-      )}
+      }
+
       {/* rendering if icon   */}
       {icon && (
         <div className="flex justify-center">
